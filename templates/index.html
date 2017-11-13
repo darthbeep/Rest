@@ -5,9 +5,13 @@
         <title>Nasa</title>
     </head>
     <body>
-        <img src="{{ img1 }}" alt="">
-        <img src="{{ img2 }}" alt="">
-        <p>{{ expl }}</p>
+        {% for article in articles %}
+                <a href="{{ article.url }}">
+                    <h1>{{ article.title }}</h1>
+                </a>
+                <h2>{{ article.author }}</h2>
+        {% endfor %}
+
     </body>
 
 </html>
